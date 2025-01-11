@@ -32,6 +32,8 @@
               :image="toy.image"
               :difficulty="toy.difficulty"
               :patch="toy.patch"
+              :slug="toy.slug"
+              category="toys"
           />
         </div>
       </div>

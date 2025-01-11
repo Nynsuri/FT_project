@@ -32,6 +32,8 @@
               :image="transmog.image"
               :difficulty="transmog.difficulty"
               :patch="transmog.patch"
+              :slug="transmog.slug"
+              category="transmogs"
           />
         </div>
       </div>

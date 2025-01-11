@@ -37,7 +37,29 @@ const routes = [
         path: '/guides/mounts/:slug',
         name: 'MountDetail',
         component: () => import('../views/MountDetail.vue'),
-        meta: { title: 'Mounts - Guides of Warcraft'}
+        meta: { title: 'Mounts - Guides of Warcraft' }
+
+    },
+    {
+        path: '/guides/pets/:slug',
+        name: 'PetDetail',
+        component: () => import('../views/PetDetail.vue'),
+        meta: { title: 'Pets - Guides of Warcraft' }
+
+    },
+    {
+        path: '/guides/toys/:slug',
+        name: 'ToyDetail',
+        component: () => import('../views/ToyDetail.vue'),
+        meta: { title: 'Toys - Guides of Warcraft' }
+
+    },
+    {
+        path: '/guides/transmogs/:slug',
+        name: 'TransmogDetail',
+        component: () => import('../views/TransmogDetail.vue'),
+        meta: { title: 'Transmogs - Guides of Warcraft' }
+
     },
     {
         path: '/about',

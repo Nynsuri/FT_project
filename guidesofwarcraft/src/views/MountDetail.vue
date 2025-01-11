@@ -95,7 +95,7 @@ export default {
 
 .mount-detail {
   padding-top: 2rem;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 
 .detail-image {

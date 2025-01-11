@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-8">
           <div class="about-content">
-            <h2>Welcome to WoW Guides</h2>
+            <h2>Welcome to Guides of Warcraft</h2>
             <p>We are passionate World of Warcraft players dedicated to providing the most comprehensive and up-to-date guides for collectors and enthusiasts. Our team works tirelessly to ensure that you have access to the best information about mounts, pets, toys, and transmog collections.</p>
 
             <h3>Our Mission</h3>
@@ -22,7 +22,7 @@
             </ul>
 
             <h3>Contact Us</h3>
-            <p>Have questions or suggestions? We'd love to hear from you! You can reach us through our social media channels or email us at contact@wowguides.com</p>
+            <p>Have questions or suggestions? We'd love to hear from you! You can reach us through our social media channels or email us at contact@GoW.com</p>
           </div>
         </div>
 
@@ -48,14 +48,14 @@ export default {
     return {
       teamMembers: [
         {
-          name: 'Sarah Johnson',
+          name: 'Patrik Schveizer',
           role: 'Lead Guide Writer',
-          avatar: '/images/team/sarah.jpg'
+          avatar: '/images/team/patrik.png'
         },
         {
-          name: 'Mike Chen',
+          name: 'Maroš',
           role: 'Mount Specialist',
-          avatar: '/images/team/mike.jpg'
+          avatar: '/images/team/maros.png'
         },
         {
           name: 'Andrej Šima',

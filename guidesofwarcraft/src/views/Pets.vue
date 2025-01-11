@@ -32,6 +32,8 @@
               :image="pet.image"
               :difficulty="pet.difficulty"
               :patch="pet.patch"
+              :slug="pet.slug"
+              category="pets"
           />
         </div>
       </div>

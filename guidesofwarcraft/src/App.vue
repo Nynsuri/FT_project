@@ -26,6 +26,15 @@ export default {
 </script>
 
 <style>
+.page {
+  padding-top: 80px;
+}
+
+.page-title {
+  margin-top: 60px;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
 * {
   margin: 0;
   padding: 0;

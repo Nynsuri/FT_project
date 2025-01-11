@@ -1,5 +1,12 @@
 import { defineStore } from 'pinia'
-import mockData from '../Data/data.json'
+import Data from '../Data/data.json'
+
+const generateSlug = (text) => {
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '')
+}
 
 export const useGuideStore = defineStore('guides', {
     state: () => ({
@@ -12,34 +19,43 @@ export const useGuideStore = defineStore('guides', {
 
     actions: {
         fetchMounts() {
-            this.mounts = mockData.mounts
+            this.mounts = Data.mounts.map(mount => ({
+                ...mount,
+                slug: mount.slug || generateSlug(mount.name)
+            }))
         },
-
         fetchPets() {
-            this.pets = mockData.pets
+            this.pets = Data.pets.map(pet => ({
+                ...pet,
+                slug: pet.slug || generateSlug(pet.name)
+            }))
         },
-
         fetchToys() {
-            this.toys = mockData.toys
+            this.toys = Data.toys.map(toy => ({
+                ...toy,
+                slug: toy.slug || generateSlug(toy.name)
+            }))
         },
-
         fetchTransmogs() {
-            this.transmogs = mockData.transmogs
+            this.transmogs = Data.transmogs.map(transmog => ({
+                ...transmog,
+                slug: transmog.slug || generateSlug(transmog.name)
+            }))
         }
     },
 
     getters: {
-        getMountById: (state) => (id) => {
-            return state.mounts.find(mount => mount.id === id)
+        getMountBySlug: (state) => (slug) => {
+            return state.mounts.find(mount => mount.slug === slug)
         },
-        getPetById: (state) => (id) => {
-            return state.pets.find(pet => pet.id === id)
+        getPetBySlug: (state) => (slug) => {
+            return state.pets.find(pet => pet.slug === slug)
         },
-        getToyById: (state) => (id) => {
-            return state.toys.find(toy => toy.id === id)
+        getToyBySlug: (state) => (slug) => {
+            return state.toys.find(toy => toy.slug === slug)
         },
-        getTransmogById: (state) => (id) => {
-            return state.transmogs.find(transmog => transmog.id === id)
+        getTransmogBySlug: (state) => (slug) => {
+            return state.transmogs.find(transmog => transmog.slug === slug)
         }
     }
 })

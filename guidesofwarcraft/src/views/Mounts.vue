@@ -32,6 +32,8 @@
               :image="mount.image"
               :difficulty="mount.difficulty"
               :patch="mount.patch"
+              :slug="mount.slug"
+              category="mounts"
           />
         </div>
       </div>

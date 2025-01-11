@@ -52,14 +52,12 @@ export default {
   },
   methods: {
     hideDropdown() {
-      // Pridáme malé oneskorenie pred skrytím menu
       this.timeoutId = setTimeout(() => {
         this.showGuides = false
       }, 100)
     }
   },
   beforeUnmount() {
-    // Vyčistíme timeout pri zničení komponentu
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
@@ -93,7 +91,6 @@ export default {
   color: #ffd100;
 }
 
-/* Pridáme transition pre plynulé zobrazenie/skrytie */
 .dropdown-menu {
   display: block;
   opacity: 0;
@@ -108,7 +105,6 @@ export default {
   transform: translateY(0);
 }
 
-/* Zväčšíme priestor pre hover */
 .dropdown {
   padding-bottom: 10px;
 }

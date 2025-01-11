@@ -3,96 +3,162 @@
     {
       "id": 1,
       "name": "Invincible",
+      "slug": "invincible",
       "description": "Invincible's Reins drop from 25-player Heroic Lich King in Icecrown Citadel",
       "image": "/images/mounts/invincible.jpg",
       "difficulty": "Hard",
-      "patch": "10.2",
+      "patch": "3.4.0",
       "expansion": "Wrath of the Lich King",
-      "type": "Flying",
+      "type": "Flying / Dragonriding",
       "source": "Raid Drop",
-      "dropRate": "1%"
+      "dropRate": "1%",
+      "obtainSteps": [
+        "Reach level 80 for the easiest run",
+        "Enter Icecrown Citadel raid",
+        "Defeat The Lich King on 25-player Heroic difficulty",
+        "Hope that it drops"
+      ],
+      "requirements": [
+        "Level 60+",
+        "Access to Icecrown Citadel",
+        "Capable of defeating Heroic Lich King"
+      ]
     },
     {
       "id": 2,
       "name": "Swift Spectral Tiger",
+      "slug": "swift-spectral-tiger",
       "description": "This extremely rare mount comes from the Trading Card Game",
       "image": "/images/mounts/spectral-tiger.jpg",
       "difficulty": "Very Hard",
       "patch": "10.2",
       "expansion": "Trading Card Game",
       "type": "Ground",
-      "source": "TCG",
-      "dropRate": "N/A"
+      "source": "TCG Card",
+      "obtainSteps": [
+        "Obtain the TCG card",
+        "Redeem the code on the WoW website",
+        "Collect mount from in-game mail"
+      ],
+      "requirements": [
+        "Valid TCG card code"
+      ]
     }
   ],
   "pets": [
     {
       "id": 1,
       "name": "Lil' K.T.",
+      "slug": "lil-kt",
       "description": "A miniature version of Kel'Thuzad",
       "image": "/images/pets/lil-kt.jpg",
       "difficulty": "Medium",
       "patch": "10.2",
       "type": "Undead",
       "source": "Store",
-      "level": 25
-    },
-    {
-      "id": 2,
-      "name": "Core Hound Pup",
-      "description": "A loyal companion from the depths of Molten Core",
-      "image": "/images/pets/core-hound-pup.jpg",
-      "difficulty": "Easy",
-      "patch": "10.2",
-      "type": "Beast",
-      "source": "Achievement",
-      "level": 25
+      "level": 25,
+      "abilities": [
+        {
+          "name": "Death and Decay",
+          "description": "Deals shadow damage over time"
+        },
+        {
+          "name": "Ice Tomb",
+          "description": "Freezes the target"
+        }
+      ],
+      "obtainSteps": [
+        "Visit the Blizzard Store",
+        "Purchase Lil' K.T.",
+        "Collect from in-game mail"
+      ]
     }
   ],
   "toys": [
     {
       "id": 1,
       "name": "Hearthstone Board",
+      "slug": "hearthstone-board",
       "description": "Places a Hearthstone board that others can play on",
       "image": "/images/toys/hearthstone-board.jpg",
       "difficulty": "Easy",
       "patch": "10.2",
       "expansion": "Dragonflight",
-      "source": "Achievement"
-    },
-    {
-      "id": 2,
-      "name": "Party G.R.E.N.A.D.E.",
-      "description": "Transforms nearby players into party goers",
-      "image": "/images/toys/party-grenade.jpg",
-      "difficulty": "Medium",
-      "patch": "10.2",
-      "expansion": "Shadowlands",
-      "source": "Drop"
+      "source": "Achievement",
+      "cooldown": "30 minutes",
+      "duration": "10 minutes",
+      "obtainSteps": [
+        "Complete the achievement 'Ready to Play'",
+        "Collect toy from achievement rewards"
+      ],
+      "requirements": [
+        "Level 70",
+        "Achievement completion"
+      ]
     }
   ],
   "transmogs": [
     {
       "id": 1,
       "name": "Tier 2 (Remastered) Paladin Set",
-      "description": "The iconic but remastered Redemption Armor set",
+      "slug": "tier-3-paladin-set",
+      "description": "The iconic but remastered Judgement Armor set",
       "image": "/images/transmogs/t2R-paladin.jpg",
       "difficulty": "Very Easy",
       "patch": "11.0.7",
       "class": "Paladin",
       "type": "Plate",
-      "source": "20Th Anniversary Event"
-    },
-    {
-      "id": 2,
-      "name": "Challenge Mode Gold Set",
-      "description": "Exclusive armor from MoP Challenge Modes",
-      "image": "/images/transmogs/challenge-mode.jpg",
-      "difficulty": "Very Hard",
-      "patch": "10.2",
-      "class": "Warrior",
-      "type": "Plate",
-      "source": "Legacy Achievement"
+      "source": "20Th annniversary event",
+      "pieces": [
+        {
+          "slot": "Head",
+          "item": "Judgement Headpiece",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Shoulders",
+          "item": "Judgement Spaulders",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Chest",
+          "item": "Judgement Chestpiece",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Wirst",
+          "item": "Judgement Wristguards",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Hands",
+          "item": "Judgement Handguards",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Belt",
+          "item": "Judgement Belt",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Legs",
+          "item": "Judgement Legguards",
+          "source": "Vendor"
+        },
+        {
+          "slot": "Boots",
+          "item": "Judgement Boots",
+          "source": "Vendor"
+        }
+      ],
+      "obtainSteps": [
+        "Gaint enough of anniversary bronze tokens",
+        "Find the vendor in Tanaris",
+        "Enjoy the set"
+      ],
+      "requirements": [
+        "Level 10-80"
+      ]
     }
   ]
 }

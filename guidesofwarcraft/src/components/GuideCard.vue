@@ -1,48 +1,48 @@
 <template>
-  <div class="guide-card">
-    <div class="guide-image">
-      <img :src="image" :alt="title">
-    </div>
-    <div class="guide-content">
-      <h3>{{ title }}</h3>
-      <p>{{ description }}</p>
-      <div class="guide-meta">
-        <span class="difficulty">{{ difficulty }}</span>
-        <span class="patch">Patch {{ patch }}</span>
+  <router-link :to="detailLink" class="guide-card-link">
+    <div class="guide-card">
+      <div class="guide-image">
+        <img :src="image" :alt="title">
+      </div>
+      <div class="guide-content">
+        <h3>{{ title }}</h3>
+        <p>{{ description }}</p>
+        <div class="guide-meta">
+          <span class="difficulty">{{ difficulty }}</span>
+          <span class="patch">Patch {{ patch }}</span>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 export default {
   name: 'GuideCard',
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
-    },
-    image: {
-      type: String,
-      required: true
-    },
-    difficulty: {
-      type: String,
-      default: 'Easy'
-    },
-    patch: {
-      type: String,
-      required: true
+    title: String,
+    description: String,
+    image: String,
+    difficulty: String,
+    patch: String,
+    slug: String,
+    category: String
+  },
+  computed: {
+    detailLink() {
+      return `/guides/${this.category}/${this.slug}`
     }
   }
 }
 </script>
 
 <style scoped>
+.guide-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .guide-card {
   background: #2b2b2b;
   border: 1px solid #404040;

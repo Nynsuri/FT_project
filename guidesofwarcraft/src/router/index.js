@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Mounts from '../views/Mounts.vue'
-import Pets from '../views/Pets.vue'
-import Toys from '../views/Toys.vue'
-import Transmogs from '../views/Transmogs.vue'
 import AboutUs from '../views/AboutUs.vue'
 
 const routes = [
@@ -16,26 +12,32 @@ const routes = [
     {
         path: '/guides/mounts',
         name: 'Mounts',
-        component: Mounts,
+        component: () => import('../views/Mounts.vue'),
         meta: { title: 'Mounts - Guides of Warcraft' }
     },
     {
         path: '/guides/pets',
         name: 'Pets',
-        component: Pets,
+        component: () => import('../views/Pets.vue'),
         meta: { title: 'Pets - Guides of Warcraft' }
     },
     {
         path: '/guides/toys',
         name: 'Toys',
-        component: Toys,
+        component: () => import('../views/Toys.vue'),
         meta: { title: 'Toys - Guides of Warcraft' }
     },
     {
         path: '/guides/transmogs',
         name: 'Transmogs',
-        component: Transmogs,
+        component: () => import('../views/Transmogs.vue'),
         meta: { title: 'Transmogs - Guides of Warcraft' }
+    },
+    {
+        path: '/guides/mounts/:slug',
+        name: 'MountDetail',
+        component: () => import('../views/MountDetail.vue'),
+        meta: { title: 'Mounts - Guides of Warcraft'}
     },
     {
         path: '/about',

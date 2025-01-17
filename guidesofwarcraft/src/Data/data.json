@@ -26,22 +26,93 @@
     },
     {
       "id": 2,
-      "name": "Swift Spectral Tiger",
-      "slug": "swift-spectral-tiger",
-      "description": "This extremely rare mount comes from the Trading Card Game",
-      "image": "/images/mounts/spectral-tiger.jpg",
-      "difficulty": "Very Hard",
+      "name": "Alunira",
+      "slug": "alunira",
+      "description": "A rare spawn mount obtained from the Night Dragon Alunira in Emerald Dream",
+      "image": "/images/mounts/alunira.jpg",
+      "difficulty": "Hard",
       "patch": "10.2",
-      "expansion": "Trading Card Game",
-      "type": "Ground",
-      "source": "TCG Card",
+      "expansion": "Dragonflight",
+      "type": "Flying",
+      "source": "Rare Spawn",
+      "dropRate": "1-2%",
       "obtainSteps": [
-        "Obtain the TCG card",
-        "Redeem the code on the WoW website",
-        "Collect mount from in-game mail"
+        "Travel to Emerald Dream",
+        "Find and engage Alunira",
+        "Defeat the boss",
+        "Hope that the mount drops"
       ],
       "requirements": [
-        "Valid TCG card code"
+        "Level 70",
+        "Access to Emerald Dream"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sky Golem",
+      "slug": "sky-golem",
+      "description": "A mechanical mount crafted by Engineers that allows herb gathering while mounted",
+      "image": "/images/mounts/sky-golem.jpg",
+      "difficulty": "Medium",
+      "patch": "5.4",
+      "expansion": "Mists of Pandaria",
+      "type": "Flying",
+      "source": "Engineering",
+      "obtainSteps": [
+        "Level Engineering to 600",
+        "Learn the recipe from Pandaria",
+        "Gather materials over 30 days",
+        "Craft daily cooldown items",
+        "Finally craft the mount"
+      ],
+      "requirements": [
+        "Engineering skill 600",
+        "Level 90+ for materials gathering"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ashes of Al'ar",
+      "slug": "ashes-of-alar",
+      "description": "The legendary phoenix mount that drops from Kael'thas Sunstrider in Tempest Keep",
+      "image": "/images/mounts/ashes-of-alar.jpg",
+      "difficulty": "Hard",
+      "patch": "2.4",
+      "expansion": "The Burning Crusade",
+      "type": "Flying",
+      "source": "Raid Drop",
+      "dropRate": "2%",
+      "obtainSteps": [
+        "Enter Tempest Keep: The Eye",
+        "Clear to Kael'thas Sunstrider",
+        "Defeat Kael'thas",
+        "Hope the mount drops"
+      ],
+      "requirements": [
+        "Level 70+",
+        "Access to Tempest Keep"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mekgineer's Chopper",
+      "slug": "mekgineers-chopper",
+      "description": "An engineering crafted motorcycle that can carry a passenger",
+      "image": "/images/mounts/mekgineers-chopper.jpg",
+      "difficulty": "Medium",
+      "patch": "3.0",
+      "expansion": "Wrath of the Lich King",
+      "type": "Ground",
+      "source": "Engineering",
+      "obtainSteps": [
+        "Level Engineering to 450",
+        "Purchase plans from Roxi Ramrocket",
+        "Gather materials",
+        "Craft the mount"
+      ],
+      "requirements": [
+        "Engineering skill 450",
+        "Significant gold investment"
       ]
     }
   ],
@@ -72,6 +143,111 @@
         "Purchase Lil' K.T.",
         "Collect from in-game mail"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Sister of Temptation",
+      "slug": "sister-of-temptation",
+      "description": "A demonic battle pet from the Venthyr Covenant",
+      "image": "/images/pets/sister-of-temptation.jpg",
+      "difficulty": "Medium",
+      "patch": "9.0",
+      "type": "Demon",
+      "source": "Covenant",
+      "level": 25,
+      "abilities": [
+        {
+          "name": "Seduce",
+          "description": "Charms the enemy"
+        },
+        {
+          "name": "Dark Slash",
+          "description": "Deals shadow damage"
+        }
+      ],
+      "obtainSteps": [
+        "Join Venthyr Covenant",
+        "Complete specific covenant quest",
+        "Receive pet as reward"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Gill'dan",
+      "slug": "gilldan",
+      "description": "A murloc dressed as Gul'dan",
+      "image": "/images/pets/gilldan.jpg",
+      "difficulty": "Easy",
+      "patch": "7.0",
+      "type": "Humanoid",
+      "source": "Store",
+      "level": 25,
+      "abilities": [
+        {
+          "name": "Mrgl Blast",
+          "description": "Deals fel damage"
+        },
+        {
+          "name": "Murloc Charge",
+          "description": "Charges the enemy"
+        }
+      ],
+      "obtainSteps": [
+        "Purchase from Blizzard Store",
+        "Collect from mailbox"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Murkastrasza",
+      "slug": "murkastrasza",
+      "description": "A murloc dressed as Alexstrasza",
+      "image": "/images/pets/murkastrasza.jpg",
+      "difficulty": "Medium",
+      "patch": "10.0",
+      "type": "Dragonkin",
+      "source": "Achievement",
+      "level": 25,
+      "abilities": [
+        {
+          "name": "Dragon's Breath",
+          "description": "Breathes fire"
+        },
+        {
+          "name": "Life-Binder",
+          "description": "Heals allies"
+        }
+      ],
+      "obtainSteps": [
+        "Complete Dragon Isles achievement",
+        "Collect reward"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pocket Reaver",
+      "slug": "pocket-reaver",
+      "description": "A miniature fel reaver",
+      "image": "/images/pets/pocket-reaver.jpg",
+      "difficulty": "Hard",
+      "patch": "7.3",
+      "type": "Mechanical",
+      "source": "Drop",
+      "level": 25,
+      "abilities": [
+        {
+          "name": "Stomp",
+          "description": "AoE damage"
+        },
+        {
+          "name": "Fel Beam",
+          "description": "Single target damage"
+        }
+      ],
+      "obtainSteps": [
+        "Kill fel reavers on Argus",
+        "Hope for drop"
+      ]
     }
   ],
   "toys": [
@@ -95,20 +271,103 @@
         "Level 70",
         "Achievement completion"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Dark Ranger's Spare Cowl",
+      "slug": "dark-rangers-spare-cowl",
+      "description": "Transform into a Dark Ranger",
+      "image": "/images/toys/dark-ranger-cowl.jpg",
+      "difficulty": "Medium",
+      "patch": "9.2",
+      "expansion": "Shadowlands",
+      "source": "Quest",
+      "cooldown": "15 minutes",
+      "duration": "20 minutes",
+      "obtainSteps": [
+        "Complete Shadowlands campaign",
+        "Complete Dark Ranger questline",
+        "Receive toy as reward"
+      ],
+      "requirements": [
+        "Level 60+",
+        "Shadowlands campaign completion"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Never Ending Toy",
+      "slug": "never-ending-toy",
+      "description": "A toy that spawns random toys from your collection",
+      "image": "/images/toys/never-ending-toy.jpg",
+      "difficulty": "Hard",
+      "patch": "10.0",
+      "expansion": "Dragonflight",
+      "source": "Achievement",
+      "cooldown": "1 hour",
+      "duration": "Varies",
+      "obtainSteps": [
+        "Collect 400 toys",
+        "Complete achievement",
+        "Collect reward"
+      ],
+      "requirements": [
+        "400 toys collected"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Orb of the Sin'dorei",
+      "slug": "orb-of-sindorei",
+      "description": "Transform into a Blood Elf noble",
+      "image": "/images/toys/orb-of-sindorei.jpg",
+      "difficulty": "Medium",
+      "patch": "5.1",
+      "expansion": "Mists of Pandaria",
+      "source": "Reputation",
+      "cooldown": "30 minutes",
+      "duration": "10 minutes",
+      "obtainSteps": [
+        "Reach Exalted with Sunreaver Onslaught",
+        "Purchase from vendor"
+      ],
+      "requirements": [
+        "Exalted with Sunreaver Onslaught"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sylvanas' Music Box",
+      "slug": "sylvanas-music-box",
+      "description": "Plays Sylvanas' Lament",
+      "image": "/images/toys/sylvanas-music-box.jpg",
+      "difficulty": "Hard",
+      "patch": "9.2",
+      "expansion": "Shadowlands",
+      "source": "Rare Drop",
+      "cooldown": "2 hours",
+      "duration": "Music duration",
+      "obtainSteps": [
+        "Defeat Sylvanas in Sanctum of Domination",
+        "Hope for the drop"
+      ],
+      "requirements": [
+        "Access to Sanctum of Domination"
+      ]
     }
   ],
   "transmogs": [
     {
       "id": 1,
       "name": "Tier 2 (Remastered) Paladin Set",
-      "slug": "tier-3-paladin-set",
+      "slug": "tier-2-paladin-set",
       "description": "The iconic but remastered Judgement Armor set",
       "image": "/images/transmogs/t2R-paladin.jpg",
       "difficulty": "Very Easy",
       "patch": "11.0.7",
       "class": "Paladin",
       "type": "Plate",
-      "source": "20Th annniversary event",
+      "source": "20th annniversary event",
       "pieces": [
         {
           "slot": "Head",
@@ -158,6 +417,146 @@
       ],
       "requirements": [
         "Level 10-80"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Warglaives of Azzinoth",
+      "slug": "warglaives-of-azzinoth",
+      "description": "The legendary twin glaives once wielded by Illidan Stormrage",
+      "image": "/images/transmogs/warglaives.jpg",
+      "difficulty": "Very Hard",
+      "patch": "2.1",
+      "class": "Demon Hunter, Warrior, Rogue",
+      "type": "One-Hand Swords",
+      "source": "Black Temple Raid",
+      "pieces": [
+        {
+          "slot": "Main Hand",
+          "item": "Main Hand Warglaive of Azzinoth",
+          "source": "Illidan Stormrage"
+        },
+        {
+          "slot": "Off Hand",
+          "item": "Off Hand Warglaive of Azzinoth",
+          "source": "Illidan Stormrage"
+        }
+      ],
+      "obtainSteps": [
+        "Run Black Temple raid weekly",
+        "Defeat Illidan Stormrage",
+        "Hope for drops",
+        "Need both glaives for the set"
+      ],
+      "requirements": [
+        "Level 70+",
+        "Access to Black Temple"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Thunderfury, Blessed Blade of the Windseeker",
+      "slug": "thunderfury",
+      "description": "The legendary sword of the Windseeker",
+      "image": "/images/transmogs/thunderfury.jpg",
+      "difficulty": "Very Hard",
+      "patch": "1.1",
+      "class": "Warrior, Paladin, Rogue",
+      "type": "One-Hand Sword",
+      "source": "Molten Core Quest Chain",
+      "pieces": [
+        {
+          "slot": "Main Hand",
+          "item": "Thunderfury",
+          "source": "Quest Reward"
+        }
+      ],
+      "obtainSteps": [
+        "Get Bindings from Molten Core bosses",
+        "Complete extensive quest chain",
+        "Gather materials",
+        "Complete final quest"
+      ],
+      "requirements": [
+        "Level 60+",
+        "Access to Molten Core"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sulfuras, Hand of Ragnaros",
+      "slug": "sulfuras",
+      "description": "The legendary hammer of Ragnaros the Firelord",
+      "image": "/images/transmogs/sulfuras.jpg",
+      "difficulty": "Very Hard",
+      "patch": "1.0",
+      "class": "Warrior, Paladin",
+      "type": "Two-Hand Mace",
+      "source": "Molten Core Craft",
+      "pieces": [
+        {
+          "slot": "Two-Hand",
+          "item": "Sulfuras",
+          "source": "Crafting"
+        }
+      ],
+      "obtainSteps": [
+        "Get Eye of Sulfuras from Ragnaros",
+        "Get Sulfuron Hammer",
+        "Gather materials",
+        "Craft weapon"
+      ],
+      "requirements": [
+        "Level 60+",
+        "Access to Molten Core"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vestments of Second Sight",
+      "slug": "vestments-of-second-sight",
+      "description": "Mythic Demon Hunter set from The Nighthold",
+      "image": "/images/transmogs/dh-nighthold.jpg",
+      "difficulty": "Hard",
+      "patch": "7.1.5",
+      "class": "Demon Hunter",
+      "type": "Leather",
+      "source": "The Nighthold Mythic",
+      "pieces": [
+        {
+          "slot": "Head",
+          "item": "Hood of Second Sight",
+          "source": "Boss drop"
+        },
+        {
+          "slot": "Shoulders",
+          "item": "Shoulderguards of Second Sight",
+          "source": "Boss drop"
+        },
+        {
+          "slot": "Chest",
+          "item": "Tunic of Second Sight",
+          "source": "Boss drop"
+        },
+        {
+          "slot": "Hands",
+          "item": "Grips of Second Sight",
+          "source": "Boss drop"
+        },
+        {
+          "slot": "Legs",
+          "item": "Legwraps of Second Sight",
+          "source": "Boss drop"
+        }
+      ],
+      "obtainSteps": [
+        "Access The Nighthold on Mythic difficulty",
+        "Defeat various bosses",
+        "Collect all set pieces"
+      ],
+      "requirements": [
+        "Level 110+",
+        "Capable of Mythic raiding"
       ]
     }
   ]

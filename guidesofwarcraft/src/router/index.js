@@ -72,6 +72,12 @@ const routes = [
         name: 'Favorites',
         component: () => import('../views/Favorites.vue'),
         meta: { title: 'My Favorites - Guides of Warcraft' }
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('../views/NotFound.vue'),
+        meta: { title: '404 Not Found - Guides of Warcraft' }
     }
 ]
 

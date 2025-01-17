@@ -35,15 +35,20 @@
             <router-link class="nav-link" to="/about">About Us</router-link>
           </li>
         </ul>
-        <SearchBar />
+        <FavoriteCounter />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import FavoriteCounter from './FavoriteCounter.vue'
+
 export default {
   name: 'Navbar',
+  components: {
+    FavoriteCounter
+  },
   data() {
     return {
       showGuides: false,

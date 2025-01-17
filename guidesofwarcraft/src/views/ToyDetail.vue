@@ -12,7 +12,11 @@
           <img :src="toy.image" :alt="toy.name" class="detail-image">
         </div>
         <div class="col-md-6">
-          <h1>{{ toy.name }}</h1>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>{{ toy.name }}</h1>
+            <FavoriteButton :item="toy" category="toys" />
+          </div>
+
           <div class="meta-info">
             <span class="difficulty">{{ toy.difficulty }}</span>
             <span class="patch">Patch {{ toy.patch }}</span>
@@ -20,18 +24,18 @@
           </div>
           <p class="description">{{ toy.description }}</p>
 
-          <div class="toy-info">
+          <div class="toy-details">
             <h2>Toy Information</h2>
-            <div class="cooldown-info" v-if="toy.cooldown || toy.duration">
+            <div class="info-box">
               <p v-if="toy.cooldown"><strong>Cooldown:</strong> {{ toy.cooldown }}</p>
               <p v-if="toy.duration"><strong>Duration:</strong> {{ toy.duration }}</p>
             </div>
           </div>
 
           <div class="obtain-info">
-            <h3>How to obtain</h3>
-            <p><strong>Source:</strong> {{ toy.source }}</p>
-            <div class="steps">
+            <h2>How to obtain</h2>
+            <h3>Source: {{ toy.source }}</h3>
+            <div class="steps" v-if="toy.obtainSteps">
               <h4>Steps to obtain:</h4>
               <ol>
                 <li v-for="(step, index) in toy.obtainSteps" :key="index">
@@ -66,9 +70,13 @@
 
 <script>
 import { useGuideStore } from '../stores/guides'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'ToyDetail',
+  components: {
+    FavoriteButton
+  },
   data() {
     return {
       toy: null

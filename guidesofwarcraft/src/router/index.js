@@ -66,6 +66,12 @@ const routes = [
         name: 'About',
         component: AboutUs,
         meta: { title: 'About us - Guides of Warcraft' }
+    },
+    {
+        path: '/favorites',
+        name: 'Favorites',
+        component: () => import('../views/Favorites.vue'),
+        meta: { title: 'My Favorites - Guides of Warcraft' }
     }
 ]
 

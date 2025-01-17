@@ -6,12 +6,17 @@
           <i class="fas fa-arrow-left me-2"></i>Back to Mounts
         </router-link>
       </div>
+
       <div class="row">
         <div class="col-md-6">
           <img :src="mount.image" :alt="mount.name" class="detail-image">
         </div>
         <div class="col-md-6">
-          <h1>{{ mount.name }}</h1>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>{{ mount.name }}</h1>
+            <FavoriteButton :item="mount" category="mounts" />
+          </div>
+
           <div class="meta-info">
             <span class="difficulty">{{ mount.difficulty }}</span>
             <span class="patch">Patch {{ mount.patch }}</span>
@@ -22,7 +27,6 @@
           <div class="obtain-info">
             <h3>Source: {{ mount.source }}</h3>
             <p v-if="mount.dropRate">Drop Rate: {{ mount.dropRate }}</p>
-
             <div class="steps">
               <h4>Steps to obtain:</h4>
               <ol>
@@ -58,9 +62,13 @@
 
 <script>
 import { useGuideStore } from '../stores/guides'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'MountDetail',
+  components: {
+    FavoriteButton
+  },
   data() {
     return {
       mount: null

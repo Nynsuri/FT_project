@@ -1,4 +1,4 @@
-Copy<template>
+<template>
   <div class="transmog-detail" v-if="transmog">
     <div class="container">
       <div class="back-button mb-4">
@@ -12,7 +12,11 @@ Copy<template>
           <img :src="transmog.image" :alt="transmog.name" class="detail-image">
         </div>
         <div class="col-md-6">
-          <h1>{{ transmog.name }}</h1>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>{{ transmog.name }}</h1>
+            <FavoriteButton :item="transmog" category="transmogs" />
+          </div>
+
           <div class="meta-info">
             <span class="difficulty">{{ transmog.difficulty }}</span>
             <span class="patch">Patch {{ transmog.patch }}</span>
@@ -23,9 +27,9 @@ Copy<template>
 
           <div class="set-info">
             <h2>Set Information</h2>
-            <div v-if="transmog.pieces" class="set-pieces">
+            <div v-if="transmog.pieces" class="piece-list">
               <h3>Set Pieces</h3>
-              <div class="piece" v-for="piece in transmog.pieces" :key="piece.slot">
+              <div v-for="piece in transmog.pieces" :key="piece.slot" class="piece-item">
                 <div class="piece-header">
                   <strong>{{ piece.slot }}</strong>
                   <span class="source">{{ piece.source }}</span>
@@ -36,8 +40,9 @@ Copy<template>
           </div>
 
           <div class="obtain-info">
-            <h3>How to obtain</h3>
-            <div class="steps">
+            <h2>How to obtain</h2>
+            <div class="steps" v-if="transmog.obtainSteps">
+              <h4>Steps to obtain:</h4>
               <ol>
                 <li v-for="(step, index) in transmog.obtainSteps" :key="index">
                   {{ step }}
@@ -71,9 +76,13 @@ Copy<template>
 
 <script>
 import { useGuideStore } from '../stores/guides'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'TransmogDetail',
+  components: {
+    FavoriteButton
+  },
   data() {
     return {
       transmog: null

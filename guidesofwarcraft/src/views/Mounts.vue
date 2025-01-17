@@ -1,5 +1,5 @@
 <template>
-  <div class="mounts-page">
+  <div class="page">
     <div class="container">
       <h1 class="page-title">Mount Guides</h1>
 
@@ -32,9 +32,13 @@
               :image="mount.image"
               :difficulty="mount.difficulty"
               :patch="mount.patch"
-              :slug="mount.slug"
+              :slug="mount.slug || ''"
               category="mounts"
-          />
+          >
+            <template #actions>
+              <FavoriteButton :item="mount" category="mounts" />
+            </template>
+          </GuideCard>
         </div>
       </div>
     </div>
@@ -44,10 +48,13 @@
 <script>
 import { useGuideStore } from '../stores/guides'
 import GuideCard from '../components/GuideCard.vue'
+import FavoriteButton from '../components/FavoriteButton.vue'
+
 export default {
   name: 'Mounts',
   components: {
     GuideCard,
+    FavoriteButton
   },
   data() {
     return {
@@ -60,7 +67,7 @@ export default {
   },
   computed: {
     filteredMounts() {
-      let mounts = this.store.mounts
+      let mounts = this.store.mounts || []
 
       if (this.selectedExpansion) {
         mounts = mounts.filter(m => m.expansion === this.selectedExpansion)

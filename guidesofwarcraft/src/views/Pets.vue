@@ -1,5 +1,5 @@
 <template>
-  <div class="pets-page">
+  <div class="page">
     <div class="container">
       <h1 class="page-title">Battle Pet Guides</h1>
 
@@ -32,9 +32,13 @@
               :image="pet.image"
               :difficulty="pet.difficulty"
               :patch="pet.patch"
-              :slug="pet.slug"
+              :slug="pet.slug || ''"
               category="pets"
-          />
+          >
+            <template #actions>
+              <FavoriteButton :item="pet" category="pets" />
+            </template>
+          </GuideCard>
         </div>
       </div>
     </div>
@@ -42,26 +46,28 @@
 </template>
 
 <script>
-import { useGuideStore } from '../stores/guides'
+import {useGuideStore} from '../stores/guides'
 import GuideCard from '../components/GuideCard.vue'
+import FavoriteButton from '../components/FavoriteButton.vue'
+
 export default {
   name: 'Pets',
   components: {
     GuideCard,
+    FavoriteButton
   },
   data() {
     return {
       store: useGuideStore(),
       selectedType: '',
       selectedSource: '',
-      searchQuery: '',
       types: ['Humanoid', 'Dragonkin', 'Flying', 'Undead', 'Critter', 'Magical', 'Elemental', 'Beast', 'Aquatic', 'Mechanical'],
       sources: ['Wild', 'Vendor', 'Quest', 'Achievement', 'Store', 'Promotion']
     }
   },
   computed: {
     filteredPets() {
-      let pets = this.store.pets
+      let pets = this.store.pets || []
 
       if (this.selectedType) {
         pets = pets.filter(p => p.type === this.selectedType)

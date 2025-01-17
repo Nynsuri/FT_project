@@ -1,10 +1,10 @@
 <template>
-  <div class="transmogs-page">
+  <div class="page">
     <div class="container">
       <h1 class="page-title">Transmog Guides</h1>
 
       <div class="filters mb-4">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-md-3">
             <select class="form-select" v-model="selectedClass">
               <option value="">All Classes</option>
@@ -32,9 +32,13 @@
               :image="transmog.image"
               :difficulty="transmog.difficulty"
               :patch="transmog.patch"
-              :slug="transmog.slug"
+              :slug="transmog.slug || ''"
               category="transmogs"
-          />
+          >
+            <template #actions>
+              <FavoriteButton :item="transmog" category="transmogs" />
+            </template>
+          </GuideCard>
         </div>
       </div>
     </div>
@@ -44,11 +48,13 @@
 <script>
 import { useGuideStore } from '../stores/guides'
 import GuideCard from '../components/GuideCard.vue'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'Transmogs',
   components: {
-    GuideCard
+    GuideCard,
+    FavoriteButton
   },
   data() {
     return {
@@ -61,7 +67,7 @@ export default {
   },
   computed: {
     filteredTransmogs() {
-      let transmogs = this.store.transmogs
+      let transmogs = this.store.transmogs || []
 
       if (this.selectedClass) {
         transmogs = transmogs.filter(t => t.class === this.selectedClass)

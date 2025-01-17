@@ -1,10 +1,10 @@
 <template>
-  <div class="toys-page">
+  <div class="page">
     <div class="container">
       <h1 class="page-title">Toy Collection Guides</h1>
 
       <div class="filters mb-4">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-md-3">
             <select class="form-select" v-model="selectedSource">
               <option value="">All Sources</option>
@@ -32,9 +32,13 @@
               :image="toy.image"
               :difficulty="toy.difficulty"
               :patch="toy.patch"
-              :slug="toy.slug"
+              :slug="toy.slug || ''"
               category="toys"
-          />
+          >
+            <template #actions>
+              <FavoriteButton :item="toy" category="toys" />
+            </template>
+          </GuideCard>
         </div>
       </div>
     </div>
@@ -44,11 +48,13 @@
 <script>
 import { useGuideStore } from '../stores/guides'
 import GuideCard from '../components/GuideCard.vue'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'Toys',
   components: {
-    GuideCard
+    GuideCard,
+    FavoriteButton
   },
   data() {
     return {
@@ -61,7 +67,7 @@ export default {
   },
   computed: {
     filteredToys() {
-      let toys = this.store.toys
+      let toys = this.store.toys || []
 
       if (this.selectedSource) {
         toys = toys.filter(t => t.source === this.selectedSource)

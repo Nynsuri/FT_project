@@ -12,7 +12,11 @@
           <img :src="pet.image" :alt="pet.name" class="detail-image">
         </div>
         <div class="col-md-6">
-          <h1>{{ pet.name }}</h1>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>{{ pet.name }}</h1>
+            <FavoriteButton :item="pet" category="pets" />
+          </div>
+
           <div class="meta-info">
             <span class="difficulty">{{ pet.difficulty }}</span>
             <span class="patch">Patch {{ pet.patch }}</span>
@@ -20,19 +24,28 @@
           </div>
           <p class="description">{{ pet.description }}</p>
 
-          <h2>Battle Pet Information</h2>
-          <div class="obtain-info">
-            <h3>Source: {{ pet.source }}</h3>
-            <div class="abilities" v-if="pet.abilities">
-              <h4>Abilities</h4>
-              <ul class="ability-list">
-                <li v-for="ability in pet.abilities" :key="ability.name">
-                  <strong>{{ ability.name }}</strong>
-                  <p>{{ ability.description }}</p>
-                </li>
-              </ul>
+          <div class="battle-info">
+            <h2>Battle Pet Information</h2>
+            <div class="stats">
+              <p><strong>Type:</strong> {{ pet.type }}</p>
+              <p><strong>Level:</strong> {{ pet.level }}</p>
             </div>
-            <div class="steps">
+
+            <div v-if="pet.abilities" class="abilities">
+              <h3>Abilities</h3>
+              <div class="ability-list">
+                <div v-for="ability in pet.abilities" :key="ability.name" class="ability">
+                  <h4>{{ ability.name }}</h4>
+                  <p>{{ ability.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="obtain-info">
+            <h2>How to obtain</h2>
+            <h3>Source: {{ pet.source }}</h3>
+            <div class="steps" v-if="pet.obtainSteps">
               <h4>Steps to obtain:</h4>
               <ol>
                 <li v-for="(step, index) in pet.obtainSteps" :key="index">
@@ -58,9 +71,13 @@
 
 <script>
 import { useGuideStore } from '../stores/guides'
+import FavoriteButton from '../components/FavoriteButton.vue'
 
 export default {
   name: 'PetDetail',
+  components: {
+    FavoriteButton
+  },
   data() {
     return {
       pet: null

@@ -31,7 +31,6 @@ export default {
 }
 
 .page-title {
-  margin-top: 60px;
   margin-bottom: 2rem;
   color: var(--accent-color);
 }

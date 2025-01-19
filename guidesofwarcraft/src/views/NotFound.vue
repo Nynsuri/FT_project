@@ -1,4 +1,3 @@
-<!-- views/NotFound.vue -->
 <template>
   <div class="not-found">
     <div class="container text-center">

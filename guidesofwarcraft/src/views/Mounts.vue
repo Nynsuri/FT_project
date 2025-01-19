@@ -61,7 +61,7 @@ export default {
       store: useGuideStore(),
       selectedExpansion: '',
       selectedType: '',
-      expansions: ['Dragonflight', 'Shadowlands', 'Battle for Azeroth', 'Legion'],
+      expansions: ['Dragonflight', 'Shadowlands', 'Battle for Azeroth', 'Legion', 'Warlords of Draenor', 'Mists of Pandaria', 'Cataclysm', 'Wrath of the Lich King', 'The Burning Crusade', 'Vanilla'],
       types: ['Ground', 'Flying', 'Aquatic', 'Special']
     }
   },

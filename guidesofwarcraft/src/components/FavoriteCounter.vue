@@ -7,16 +7,17 @@
 
 <script>
 import { useFavoritesStore } from '../stores/favorites'
-import { computed } from 'vue'
 
 export default {
   name: 'FavoriteCounter',
-  setup() {
-    const store = useFavoritesStore()
-    const totalFavorites = computed(() => store.totalFavorites)
-
+  data() {
     return {
-      totalFavorites
+      store: useFavoritesStore()
+    }
+  },
+  computed: {
+    totalFavorites() {
+      return this.store.totalFavorites
     }
   }
 }
